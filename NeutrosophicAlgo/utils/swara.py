@@ -1,6 +1,17 @@
-import json
+# filepath: [swara.py](http://_vscodecontentref_/0)
 
-def load_criteria(path="data/criteria_config.json"):
+import json
+import os
+
+def load_criteria(path=None):
+    """
+    Load criteria configuration from a JSON file.
+    """
+    if path is None:
+        # Construct the absolute path to criteria_config.json
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        path = os.path.join(base_dir, "..", "data", "criteria_config.json")
+
     with open(path, "r") as f:
         return json.load(f)
 
@@ -24,6 +35,9 @@ def swara_weights(linguistic_scores, neutrosophic_scale):
     return weights
 
 def get_weighted_criteria():
+    """
+    Load criteria from configuration and compute SWARA weights.
+    """
     config = load_criteria()
     criteria = config["criteria"]
     scale = config["neutrosophic_scale"]
@@ -32,7 +46,7 @@ def get_weighted_criteria():
     linguistic_scores = [c["importance"] for c in criteria]
     weights = swara_weights(linguistic_scores, scale)
 
-    return [(c["name"], w) for c, w in zip(criteria, weights)]
+    return [(c["name"].replace("_eth", ""), w) for c, w in zip(criteria, weights)]
 
 if __name__ == "__main__":
     print("[SWARA] Weights:")

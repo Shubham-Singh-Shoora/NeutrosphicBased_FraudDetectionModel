@@ -1,16 +1,16 @@
 {
     "criteria": [
       {
-        "name": "total_value_eth",
-        "importance": "Very High"
+        "name": "total_value",
+        "importance": "Medium"
       },
       {
         "name": "recent_tx_count",
-        "importance": "High"
+        "importance": "Very High"
       },
       {
         "name": "tx_count",
-        "importance": "Medium"
+        "importance": "High"
       },
       {
         "name": "unique_counterparties",
@@ -18,19 +18,19 @@
       },
       {
         "name": "avg_tx_value",
-        "importance": "Medium"
+        "importance": "Low"
       },
       {
         "name": "interactions_with_contracts",
-        "importance": "Low"
+        "importance": "Medium"
       }
     ],
     "neutrosophic_scale": {
-      "Very High": [0.9, 0.1, 0.1],
-      "High": [0.7, 0.3, 0.3],
-      "Medium": [0.5, 0.5, 0.5],
-      "Low": [0.3, 0.7, 0.7],
-      "Very Low": [0.1, 0.9, 0.9]
+      "Very High": [0.9, 0.1, 0.0],
+      "High": [0.7, 0.2, 0.1],
+      "Medium": [0.5, 0.3, 0.2],
+      "Low": [0.3, 0.4, 0.3],
+      "Very Low": [0.1, 0.5, 0.4]
     }
   }
   
