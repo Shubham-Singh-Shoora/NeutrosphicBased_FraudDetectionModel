@@ -1,4 +1,4 @@
-﻿# 🕵️‍♂️ Ethereum Wallet Fraud Score Engine
+# 🕵️‍♂️ Ethereum Wallet Fraud Score Engine
 
 A modular, research-backed fraud detection engine using **SWARA + Neutrosophic Logic + WSM**, designed for analyzing Ethereum wallet transactions. Built for easy integration with backend APIs.
 
